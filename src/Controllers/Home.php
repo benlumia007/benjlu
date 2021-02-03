@@ -17,7 +17,7 @@ class Home {
 		Engine::view( 'home', [], [
 			'page'    => isset( $this->params['number'] ) ? intval( $this->params['number'] ) : 1,
 			'entries' => $this->entries(),
-			'title'   => 'Justin Tadlock: Life & Stuff'
+			'title'   => 'Benjamin Lu'
 		] )->display();
 	}
 
