@@ -113,7 +113,7 @@ class Application extends Container implements ApplicationContract, Bootable {
 	 */
 	protected function registerDefaultProxies() {
 
-		$this->proxy( App::class, '\Nova\App' );
+		$this->proxy( App::class, '\Merlot\App' );
 	}
 
 	/**

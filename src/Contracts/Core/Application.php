@@ -5,15 +5,16 @@
  * The Application class should be the be the primary class for working with and
  * launching the app. It extends the `Container` contract.
  *
- * @package   Mint
+ * @package   Merlot
  * @author    Benjamin Lu <benlumia007@gmail.com>
- * @copyright Copyright (c) 2021, Benjamin Lu
- * @link      https://getbenonit.com
+ * @copyright Copyright 2021. Benjamin Lu
+ * @link      https://github.com/benlumia007/benjlu
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-namespace Mint\Contracts\Core;
-use Mint\Contracts\Container\Container;
+namespace Merlot\Contracts\Core;
+
+use Merlot\Contracts\Container\Container;
 
 /**
  * Application interface.

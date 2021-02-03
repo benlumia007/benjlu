@@ -1,8 +1,8 @@
 <?php
 
-namespace Mint\Cache;
+namespace Merlot\Cache;
 
-use Mint\Tools\Collection;
+use Merlot\Tools\Collection;
 
 class CacheCollection {
 

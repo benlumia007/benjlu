@@ -6,14 +6,14 @@
  * method is to output an HTML string to the screen. This data should already be
  * escaped prior to being output.
  *
- * @package   Mint
- * @author    Benjamin Lu <benlumia007@gmail.com>
- * @copyright Copyright (c) 2021, Benjamin Lu
- * @link      https://getbenonit.com
+ * @package   MerlotCore
+ * @author    Justin Tadlock <justintadlock@gmail.com>
+ * @copyright Copyright (c) 2008 - 2018, Justin Tadlock
+ * @link      https://themehybrid.com/hybrid-core
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-namespace Mint\Contracts;
+namespace Merlot\Contracts;
 
 /**
  * Displayable interface.

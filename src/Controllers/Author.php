@@ -1,11 +1,11 @@
 <?php
 
-namespace Mint\Controllers;
+namespace Merlot\Controllers;
 
-use Mint\Entry\Entries;
-use Mint\Entry\Locator;
-use Mint\Engine;
-use Mint\ContentTypes;
+use Merlot\Entry\Entries;
+use Merlot\Entry\Locator;
+use Merlot\Engine;
+use Merlot\ContentTypes;
 
 class Author {
 

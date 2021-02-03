@@ -1,0 +1,47 @@
+<?php
+
+namespace Merlot\Controllers;
+
+use Merlot\Entry\Entries;
+use Merlot\Entry\Locator;
+//use Merlot\Entry\Types\Post;
+use Merlot\Engine;
+
+use Merlot\App;
+
+class Literature {
+
+	protected $slug;
+	protected $path = '_literature';
+
+	protected $type;
+	protected $params = [];
+
+	public function __invoke( array $params = [] ) {
+
+		$this->params = (array) $params;
+
+		$this->slug = $this->params['name'];
+
+		$this->type = App::resolve( 'content/types' )->get( 'literature' );
+
+		$entries = $this->entries();
+
+		$all = $entries->all();
+		$entry = array_shift( $all );
+
+		Engine::view( 'page', [], [
+			'title'   => $entry ? $entry->title() : 'Not Found',
+			'query'   => $entry ? $entry : false,
+			'page'    => 1,
+			'entries' => $entries
+		] )->display();
+	}
+
+	protected function entries() {
+
+		$locator = new Locator( $this->type->path() );
+
+		return new Entries( $locator, [ 'slug' => $this->slug ] );
+	}
+}

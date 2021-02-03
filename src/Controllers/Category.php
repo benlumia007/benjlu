@@ -1,12 +1,12 @@
 <?php
 
-namespace Mint\Controllers;
+namespace Merlot\Controllers;
 
-use Mint\App;
-use Mint\Entry\Entries;
-use Mint\Entry\Locator;
-use Mint\Engine;
-use Mint\ContentTypes;
+use Merlot\App;
+use Merlot\Entry\Entries;
+use Merlot\Entry\Locator;
+use Merlot\Engine;
+use Merlot\ContentTypes;
 
 class Category {
 

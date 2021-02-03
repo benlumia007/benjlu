@@ -1,9 +1,9 @@
 <?php
 
-namespace Mint\Cache;
+namespace Merlot\Cache;
 
-use Mint\App;
-use Mint\Tools\Collection;
+use Merlot\App;
+use Merlot\Tools\Collection;
 
 class Cache {
 
