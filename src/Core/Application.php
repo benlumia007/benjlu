@@ -17,10 +17,10 @@
 namespace Merlot\Core;
 
 use Merlot\Container\Container;
-use Nova\Contracts\Core\Application as ApplicationContract;
-use Nova\Contracts\Bootable;
-use Nova\Proxies\Proxy;
-use Nova\Proxies\App;
+use Merlot\Contracts\Core\Application as ApplicationContract;
+use Merlot\Contracts\Bootable;
+use Merlot\Proxies\Proxy;
+use Merlot\Proxies\App;
 
 /**
  * Application class.
