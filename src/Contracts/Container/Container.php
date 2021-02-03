@@ -5,14 +5,14 @@
  * Container classes should be used for storing, retrieving, and resolving
  * classes/objects passed into them.
  *
- * @package   NovaCore
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright Copyright (c) 2008 - 2018, Justin Tadlock
- * @link      https://themehybrid.com/hybrid-core
+ * @package   Mint
+ * @author    Benjamin Lu <benlumia007@gmail.com>
+ * @copyright Copyright (c) 2021, Benjamin Lu
+ * @link      https://getbenonit.com
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-namespace Nova\Contracts\Container;
+namespace Mint\Contracts\Container;
 
 use Closure;
 
