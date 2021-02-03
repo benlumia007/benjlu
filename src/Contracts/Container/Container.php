@@ -5,14 +5,14 @@
  * Container classes should be used for storing, retrieving, and resolving
  * classes/objects passed into them.
  *
- * @package   Mint
+ * @package   Merlot
  * @author    Benjamin Lu <benlumia007@gmail.com>
- * @copyright Copyright (c) 2021, Benjamin Lu
- * @link      https://getbenonit.com
+ * @copyright Copyright 2021. Benjamin Lu
+ * @link      https://github.com/benlumia007/benjlu
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-namespace Mint\Contracts\Container;
+namespace Merlot\Contracts\Container;
 
 use Closure;
 
