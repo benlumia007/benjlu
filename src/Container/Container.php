@@ -8,19 +8,19 @@
  * WordPress theme dev and isn't as powerful as some of the more robust
  * containers available in the larger PHP world.
  *
- * @package   MintCore
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright Copyright (c) 2008 - 2018, Justin Tadlock
- * @link      https://themehybrid.com/hybrid-core
+ * @package   Merlot
+ * @author    Benjamin Lu <benlumia007@gmail.com>
+ * @copyright Copyright 2021. Benjamin Lu
+ * @link      https://github.com/benlumia007/benjlu
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-namespace Mint\Container;
+namespace Merlot\Container;
 
 use ArrayAccess;
 use Closure;
 use ReflectionClass;
-use Mint\Contracts\Container\Container as ContainerContract;
+use Merlot\Contracts\Container\Container as ContainerContract;
 
 /**
  * A simple container for objects.
