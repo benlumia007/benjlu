@@ -16,7 +16,7 @@
 
 namespace Merlot\Core;
 
-use Nova\Container\Container;
+use Merlot\Container\Container;
 use Nova\Contracts\Core\Application as ApplicationContract;
 use Nova\Contracts\Bootable;
 use Nova\Proxies\Proxy;
