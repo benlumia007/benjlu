@@ -1,26 +1,28 @@
-  
 {
-    "name": "benlumia007/benjlu",
-    "description": "A flat content management system based on PHP.",
+    "name": "benlumia007/merlot",
+    "description": "Merlot is a flat content management system based on PHP.",
     "keywords": [
-        "wordpress"
+        "cms",
+        "flat"
     ],
-    "homepage": "https://github.com/benlumia007/benjlu",
+    "homepage": "https://github.com/benlumia007/mint",
     "license": "GPL-2.0-or-later",
     "authors": [
         {
             "name": "Benjamin Lu",
             "email": "benlumia007@gmail.com",
-            "homepage": "https://getbenonit.com",
-            "role": "Developer"
+            "homepage": "https://getbenonit.com"
         }
     ],
     "autoload": {
         "psr-4": {
-          "Mint\\": "src/"
+            "Merlot\\": "app/"
 		}
-    },
-    "require": {
-        "php": ">=5.6"
-    }
+	},
+	"require": {
+		"symfony/yaml": "^3.0",
+		"erusev/parsedown-extra": "^0.8.1",
+		"michelf/php-smartypants": "^1.8",
+		"suin/php-rss-writer": "^1.6"
+	}
 }
