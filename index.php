@@ -14,7 +14,7 @@ define( 'BENJLU_DIR', __DIR__ );
 
 $benjlu = new Benlumia007\Alembic\Core\Framework();
 
-$config = require_once( 'config.php' );
+$config = require_once( 'app/functions-config.php' );
 
 
 
