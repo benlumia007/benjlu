@@ -1,0 +1,55 @@
+////
+/// Primary screen stylesheet.
+///
+/// This is the primary stylesheet. We don't actually write any styles here.
+/// Instead, we import all of our styles from partials within the sub-folders.
+/// This file is set up based on the Inverted Triangle CSS (ITCSS) system,
+/// which gets more specific as we drill down each layer.  This keeps your
+/// style code lean and organized.
+///
+/// The bulk of your code should be within the `/components` folder.  By
+/// default, we follow the Block-Element-Modifier (BEM) system in our HTML.
+/// Each "block" is a "component" in our CSS.
+///
+/// @group  Styles
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://themehybrid.com/themes/mythic
+////
+
+// Imports all of the files needed for front-end output. Note that the order is
+// very specific and should typically not be changed.
+
+.site-header {
+	background: #fcfcfc;
+	border-bottom: 0.063em solid #f3f3f3;
+
+	.branding-navigation {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 1.25rem;
+
+		.site-branding {
+			.site-title,
+			.site-description {
+				margin: 0;
+				padding: 0;
+			}
+
+			.site-title {
+				float: left;
+				padding: 0.5rem;
+
+				a {
+					color: #000000;
+					text-decoration: none;
+				}
+			}
+
+			.site-description {
+				float: left;
+				font-size: 1rem;
+				padding: 0.8rem;
+			}
+		}
+	}
+}
