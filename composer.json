@@ -1,5 +1,5 @@
 {
-    "name": "benlumia007/merlot",
+    "name": "benlumia007/benjlu",
     "description": "Merlot is a flat content management system based on PHP.",
     "keywords": [
         "cms",
@@ -16,16 +16,10 @@
     ],
     "autoload": {
         "psr-4": {
-            "Merlot\\": "src/"
-		},
-		"files":[
-			"src/functions-helpers.php"
-		]
+            "Benjlu\\": "app/"
+		}
 	},
 	"require": {
-		"symfony/yaml": "^3.0",
-		"erusev/parsedown-extra": "^0.8.1",
-		"michelf/php-smartypants": "^1.8",
-		"suin/php-rss-writer": "^1.6"
+		"benlumia007/alembic-core": "dev-develop"
 	}
 }

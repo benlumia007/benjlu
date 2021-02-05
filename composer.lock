@@ -4,8 +4,61 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c549503f827377a966c4d6b4d6c224f6",
+    "content-hash": "5ce8eb91341d5588d2a9036e180acae6",
     "packages": [
+        {
+            "name": "benlumia007/alembic-core",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/benlumia007/alembic-core.git",
+                "reference": "4f19c8b7dacb56612bb120e1b222bd3b7b5cb31d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/benlumia007/alembic-core/zipball/4f19c8b7dacb56612bb120e1b222bd3b7b5cb31d",
+                "reference": "4f19c8b7dacb56612bb120e1b222bd3b7b5cb31d",
+                "shasum": ""
+            },
+            "require": {
+                "erusev/parsedown-extra": "^0.8.1",
+                "michelf/php-smartypants": "^1.8",
+                "suin/php-rss-writer": "^1.6",
+                "symfony/yaml": "^3.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Benlumia007\\Alembic\\": "src/"
+                },
+                "files": [
+                    "src/functions-helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Lu",
+                    "email": "benlumia007@gmail.com",
+                    "homepage": "https://getbenonit.com"
+                }
+            ],
+            "description": "Alembic Core is a flat content management system based on PHP.",
+            "homepage": "https://github.com/benlumia007/alembic-core",
+            "keywords": [
+                "cms",
+                "flat"
+            ],
+            "support": {
+                "issues": "https://github.com/benlumia007/alembic-core/issues",
+                "source": "https://github.com/benlumia007/alembic-core/tree/develop"
+            },
+            "time": "2021-02-05T06:15:22+00:00"
+        },
         {
             "name": "erusev/parsedown",
             "version": "1.7.4",
@@ -368,7 +421,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "benlumia007/alembic-core": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
