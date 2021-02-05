@@ -1,95 +1,90 @@
-// Laravel Mix config.
+/**
+ * Laravel Mix configuration file.
+ *
+ * Laravel Mix is a layer built on top of WordPress that simplifies much of the
+ * complexity of building out a Webpack configuration file. Use this file to
+ * configure how your assets are handled in the build process.
+ *
+ * @link https://laravel.com/docs/5.6/mix
+ *
+ * @package   Initiator
+ * @author    Benjamin Lu <benlumia007@gmail.com>
+ * @copyright 2020 Benjamin Lu
+ * @link      https://github.com/benlumia007/initiator
+ * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
+ */
 
-// Import required packages.
-const mix               = require( 'laravel-mix' );
-const ImageminPlugin    = require( 'imagemin-webpack-plugin' ).default;
-const CopyWebpackPlugin = require( 'copy-webpack-plugin' );
-const imageminMozjpeg   = require( 'imagemin-mozjpeg' );
+ // Import All Required Packages
+ const mix = require( 'laravel-mix' );
 
+ /*
+ * -----------------------------------------------------------------------------
+ * Theme Export Process
+ * -----------------------------------------------------------------------------
+ * Configure the export process in `webpack.mix.export.js`. This bit of code
+ * should remain at the top of the file here so that it bails early when the
+ * `export` command is run.
+ * -----------------------------------------------------------------------------
+ */
+
+if ( process.env.export ) {
+	const exportTheme = require( './webpack.mix.export.js' );
+	return;
+}
+
+ /*
+ * Sets the development path to assets. By default, this is the `/resources`
+ * folder in the theme.
+ */
 const devPath  = 'resources';
 
-// Public path.
+/*
+ * Sets the path to the generated assets. By default, this is the `/public` folder in the theme.
+ */
 mix.setPublicPath( 'public' );
 
-// Mix options.
+/*
+ * Set Laravel Mix options.
+ *
+ * @link https://laravel.com/docs/5.6/mix#postcss
+ * @link https://laravel.com/docs/5.6/mix#url-processing
+ */
 mix.options( {
 	postCss        : [ require( 'postcss-preset-env' )() ],
 	processCssUrls : false
 } );
 
-// Source maps.
+/*
+ * Builds sources maps for assets.
+ *
+ * @link https://laravel.com/docs/5.6/mix#css-source-maps
+ */
 mix.sourceMaps();
 
-// Cache busting.
+/*
+ * Versioning and cache busting. Append a unique hash for production assets. If
+ * you only want versioned assets in production, do a conditional check for
+ * `mix.inProduction()`.
+ *
+ * @link https://laravel.com/docs/5.6/mix#versioning-and-cache-busting
+ */
 mix.version();
 
-// Compile JS.
-// mix.js( `${devPath}/js/app.js`, 'js' );
+/*
+ * Compile JavaScript.
+ *
+ * @link https://laravel.com/docs/5.6/mix#working-with-scripts
+ */
+mix.js( `${devPath}/js/app.js`, 'js' );
 
-// Sass config.
-var sassConfig = {
-	outputStyle : 'expanded',
-	indentType  : 'tab',
-	indentWidth : 1
-};
+/*
+ * Compile CSS. Mix supports Sass, Less, Stylus, and plain CSS, and has functions
+ * for each of them.
+ *
+ * @link https://laravel.com/docs/5.6/mix#working-with-stylesheets
+ * @link https://laravel.com/docs/5.6/mix#sass
+ * @link https://github.com/sass/node-sass#options
+ */
 
 // Compile SASS/CSS.
-if ( mix.inProduction() ) {
-	mix.sass( `${devPath}/scss/screen.scss`, 'css', sassConfig );
-} else {
-	mix.standaloneSass( `${devPath}/scss/screen.scss`, 'css', sassConfig );
-}
-
-// Add custom Webpack configuration.
-mix.webpackConfig( {
-	stats       : 'minimal',
-	devtool     : mix.inProduction() ? false : 'source-map',
-	performance : { hints  : false    },
-	externals   : { jquery : 'jQuery' },
-	/*
-	plugins     : [
-		// @link https://github.com/webpack-contrib/copy-webpack-plugin
-		new CopyWebpackPlugin( [
-			{ from : `${devPath}/img`,   to : 'img'   },
-			{ from : `${devPath}/svg`,   to : 'svg'   },
-			{ from : `${devPath}/fonts`, to : 'fonts' }
-		] ),
-		// @link https://github.com/Klathmon/imagemin-webpack-plugin
-		new ImageminPlugin( {
-			test     : /\.(jpe?g|png|gif|svg)$/i,
-			disable  : process.env.NODE_ENV !== 'production',
-			optipng  : { optimizationLevel : 3 },
-			gifsicle : { optimizationLevel : 3 },
-			pngquant : {
-				quality : '65-90',
-				speed   : 4
-			},
-			svgo : {
-				plugins : [
-					{ cleanupIDs                : false },
-					{ removeViewBox             : false },
-					{ removeUnknownsAndDefaults : false }
-				]
-			},
-			plugins : [
-				// @link https://github.com/imagemin/imagemin-mozjpeg
-				imageminMozjpeg( { quality : 75 } )
-			]
-		} )
-	]
-	*/
-} );
-
-if ( process.env.sync ) {
-
-	// BrowserSync config.
-	mix.browserSync( {
-		proxy : 'localhost/justin',
-		files : [
-			'dist/**/*',
-			`${devPath}/views/**/*.php`,
-			'app/**/*.php',
-			'functions.php'
-		]
-	} );
-}
+mix.sass( `${devPath}/scss/screen.scss`, 'css', );
