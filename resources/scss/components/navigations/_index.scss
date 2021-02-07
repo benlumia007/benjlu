@@ -19,38 +19,4 @@
 // Imports all of the files needed for front-end output. Note that the order is
 // very specific and should typically not be changed.
 
-.site-header {
-	background: #fcfcfc;
-	border-bottom: 0.063em solid #f3f3f3;
-
-	.branding-navigation {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-gap: 1.25rem;
-
-		.site-branding {
-			.site-title,
-			.site-description {
-				margin: 0;
-				padding: 0;
-			}
-
-			.site-title {
-				float: left;
-				font-size: 2rem;
-				padding: 0.5rem;
-
-				a {
-					color: color( navy );
-					text-decoration: none;
-				}
-			}
-
-			.site-description {
-				float: left;
-				font-size: 1.250rem;
-				padding: 1rem;
-			}
-		}
-	}
-}
+@import 'primary/index';

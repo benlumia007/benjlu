@@ -32,22 +32,24 @@
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="<?= e( asset( 'css/screen.css' ) ) ?>" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script rel="javascript" src="<?= e( asset( 'js/app.js' ) ) ?>"></script>
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Merriweather:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
     </head>
 <body>
 <section id="container" class="site-container">
 	<header id="header" class="site-header">
-		<div class="site-branding">
-            <h1 class="site-title"><a href="<?= e( uri() ) ?>"><?= e( 'Benjamin Lu' ); ?></a></h1>
-            <h3 class="site-description"><?= e( 'Web Developer' ); ?></h3>
+		<div class="branding-navigation">
+			<div class="site-branding">
+				<h1 class="site-title"><a href="<?= e( uri() ) ?>"><?= e( 'Benjamin Lu' ); ?></a></h1>
+				<h3 class="site-description"><?= e( 'Web Developer' ); ?></h3>
+			</div>
+			<nav id="primary" class="menu-primary">
+				<button class="menu-toggle" aria-conrol="primary-menu" aria-expanded="false"><?= e( 'Menu' ); ?></button>
+				<ul class="menu-items">
+					<li class="menu-item"><a href="<?= e( uri( 'about-me' ) ) ?>"><?= e( 'About Me' ); ?></a></li>
+				</ul>
+			</nav>
 		</div>
-        <nav id="primary" class="menu-primary">
-            <button class="menu-toggle" aria-conrol="primary-menu" aria-expanded="false"><?= e( 'Menu' ); ?></button>
-            <ul class="menu-items">
-                <li class="menu-item"><a href="about-me"><?= e( 'About Me' ); ?></a></li>
-                <li class="menu-item"><a href="portfolio"><?= e( 'Portfolio' ); ?></a></li>
-                <li class="menu-item"><a href="hostings"><?= e( 'Hostings' ); ?></a></li>
-            </ul>
-        </nav>
 	</header>

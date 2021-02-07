@@ -16,8 +16,6 @@ $benjlu = new Benlumia007\Alembic\Core\Framework();
 
 $config = require_once( 'app/functions-config.php' );
 
-
-
 $benjlu->instance( 'path', BENJLU_DIR );
 $benjlu->instance( 'uri', $config['uri'] );
 $benjlu->instance( 'uri/relative', parse_url( $benjlu->uri, PHP_URL_PATH ) );
@@ -38,7 +36,7 @@ $benjlu->routes->get( 'feed', Benlumia007\Alembic\Controllers\Feed::class, 'top'
 $benjlu->routes->get( 'page/{number}', Benlumia007\Alembic\Controllers\Home::class, 'top' );
 
 Benlumia007\Alembic\ContentTypes::add( 'post', new Benlumia007\Alembic\Entry\Types\Post( $benjlu->routes ) );
-Benlumia007\Alembic\ContentTypes::add( 'category', new Benlumia007\Alembic\Entry\Types\Category( $benjlu->routes ) );
+Benlumia007\Alembic\ContentTypes::add( 'category', new Benlumia007\Alembic\Entry\Types\Taxonomy( $benjlu->routes ) );
 Benlumia007\Alembic\ContentTypes::add( 'era', new Benlumia007\Alembic\Entry\Types\Era( $benjlu->routes ) );
 Benlumia007\Alembic\ContentTypes::add( 'author', new Benlumia007\Alembic\Entry\Types\Author( $benjlu->routes ) );
 Benlumia007\Alembic\ContentTypes::add( 'literature', new Benlumia007\Alembic\Entry\Types\Literature( $benjlu->routes ) );

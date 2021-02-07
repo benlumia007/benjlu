@@ -1,0 +1,26 @@
+@function colors() {
+	@return (
+		aqua  : var( --aqua,   #00ffff),
+		black : var( --black,  #000000 ),
+		blue  : var( --blue,   #0000ff ),
+		maroon: var( --maroon, #800000 ),
+		navy  : var( --navy,  #000080),
+		olive : var( --olive,  #808000),
+		red   : var( --red,    #ff0000),
+		silver: var( --silver, #c0c0c0 ),
+		white : var( --white,  #ffffff ),
+		yellow: var( --yellow, #ffff00),
+	);
+}
+
+/// Returns a single color value by name.
+///
+/// @since  1.0.0
+/// @access public
+/// @param  {string}  $name  Font familiy name.
+/// @return {string}         Font family value.
+
+@function color( $name ) {
+
+	@return map-get( colors(), $name );
+}

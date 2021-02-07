@@ -18,9 +18,9 @@ if ( $entries->total() > $entries->count() ) {
 	if ( 1 < $current ) {
 		if ( 2 < $current ) {
 			$page = $current - 1;
-			$uri = Merlot\App::resolve( 'uri/relative' ) . rtrim( $request, '/' ) . '/page/' . $page;
+			$uri = Benlumia007\Alembic\App::resolve( 'uri/relative' ) . rtrim( $request, '/' ) . '/page/' . $page;
 		} else {
-			$uri = Merlot\App::resolve( 'uri/relative' ) . rtrim( $request, '/' );
+			$uri = Benlumia007\Alembic\App::resolve( 'uri/relative' ) . rtrim( $request, '/' );
 		}
 
 		echo '<li class="pagination__item pagination__item--prev"><a class="pagination__anchor pagination__anchor--link" href="' . e( $uri ) . '">&larr; Previous</a>';
@@ -38,9 +38,9 @@ if ( $entries->total() > $entries->count() ) {
 
 
 				if ( 1 != $i ) {
-					$uri = Merlot\App::resolve( 'uri/relative' ) . rtrim( $request, '/' ) . '/page/' . $i;
+					$uri = Benlumia007\Alembic\App::resolve( 'uri/relative' ) . rtrim( $request, '/' ) . '/page/' . $i;
 				} else {
-					$uri = Merlot\App::resolve( 'uri/relative' ) . rtrim( $request, '/' );
+					$uri = Benlumia007\Alembic\App::resolve( 'uri/relative' ) . rtrim( $request, '/' );
 				}
 
 				echo '<li class="pagination__item pagination__item--num"><a class="pagination__anchor pagination__anchor--link" href="' . e( $uri ) . '">' . $i . '</a>';
@@ -55,7 +55,7 @@ if ( $entries->total() > $entries->count() ) {
 
 	if ( $current < $total ) {
 			$page = $current + 1;
-			$uri = Merlot\App::resolve( 'uri/relative' ) . rtrim( $request, '/' ) . '/page/' . $page;
+			$uri = Benlumia007\Alembic\App::resolve( 'uri/relative' ) . rtrim( $request, '/' ) . '/page/' . $page;
 
 
 		echo '<li class="pagination__item pagination__item--next"><a class="pagination__anchor pagination__anchor--link" href="' . e( $uri ) . '">Next &rarr;</a>';
