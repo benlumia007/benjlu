@@ -27,19 +27,16 @@ let files = [
 	'archive.php',
 	'author.php',
 	'changelog.md',
-	'comments.php',
 	'footer.php',
-	'functions.php',
 	'header.php',
 	'home.php',
 	'index.php',
 	'page.php',
 	'readme.md',
-	'readme.txt',
 	'screenshot.png',
 	'search.php',
 	'single.php',
-	'style.css'
+	'taxonomy.php'
 ];
 
 // Folders to include.
