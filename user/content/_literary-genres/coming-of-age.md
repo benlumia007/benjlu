@@ -1,3 +1,0 @@
----
-title : Coming-of-Age
----
