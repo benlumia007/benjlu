@@ -4,7 +4,7 @@
 		<h1 class="entry-title"><?= widow( e( $entry->title() ) ) ?></h1>
 		<div class="entry-metadata">
 			<?php if ( $entry->author() ) : ?>
-				<span class="entry-author"><?php include( public_path( 'svg/user.svg.php' ) ); ?><a href="about"><?= e( $entry->author()->title() ) ?></a></span>
+				<span class="entry-author"><?php include( public_path( 'svg/user.svg.php' ) ); ?><a href="<?= e( uri() . '/about-me' ); ?>"><?= e( $entry->author()->title() ) ?></a></span>
 			<?php endif ?>
 
 			<?php if ( $entry->date() ) : ?>
