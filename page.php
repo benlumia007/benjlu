@@ -8,7 +8,7 @@
  * @author    Benjamin Lu ( https://getbenonit.com )
  */
 ?>
-<?php \Benlumia007\Alembic\Engine::view( 'header', [], [ 'title' => ! empty( $title ) ? $title : '' ] )->display() ?>
+<?php Benlumia007\Alembic\Engine::view( 'header', [], [ 'title' => $title, 'query' => ! empty( $query ) ? $query : false ] )->display() ?>
 	<section id="content" class="site-content">
 		<div id="main" class="content-area">
 			<?php foreach ( $entries->all() as $entry ) : ?>
@@ -16,4 +16,4 @@
 			<?php endforeach ?>
 		</div>
 	</section>
-<?php \Benlumia007\Alembic\Engine::view( 'footer' )->display() ?>
+<?php Benlumia007\Alembic\Engine::view( 'footer' )->display() ?>
