@@ -21,6 +21,10 @@
 
 	<?php endif ?>
 
+	<figure class="post-thumbnail alignwide">
+		<img src="<?php echo uri( $entry->meta( 'thumbnail' ) ); ?>" />
+	</figure>
+
 	<?php if ( 'aside' === $format ) : ?>
 		<div class="entry-content">
 			<?= $entry->content() ?>
