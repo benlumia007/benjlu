@@ -19,10 +19,11 @@ const rimraf  = require( 'rimraf' );
 const fs      = require( 'fs' );
 
 // Folder name to export the files to.
-let exportPath = 'initiator';
+let exportPath = 'benjlu';
 
 // Theme root-level files to include.
 let files = [
+	'.htaccess',
 	'404.php',
 	'archive.php',
 	'author.php',
