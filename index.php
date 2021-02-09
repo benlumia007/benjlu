@@ -44,6 +44,7 @@ Benlumia007\Alembic\ContentTypes::add( 'page', new Benlumia007\Alembic\Entry\Typ
 Benlumia007\Alembic\ContentTypes::registerRoutes();
 $benjlu->routes->get( '/', Benlumia007\Alembic\Controllers\Home::class );
 
+
 if ( isset( $_GET['bust-cache'] ) ) {
 
 	if ( 'all' === $_GET['bust-cache'] ) {
