@@ -11,10 +11,11 @@
 ////
 
 a {
+	border-bottom: 0.125rem solid color( navy );
 	color: color( navy );
 	text-decoration: none;
 
 	&:hover {
-		text-decoration: underline;
+		text-decoration: none;
 	}
 }
