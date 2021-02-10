@@ -17,7 +17,10 @@
     "autoload": {
         "psr-4": {
             "Benjlu\\": "app/"
-		}
+		},
+		"files":[
+			"app/functions-setup.php"
+		]
 	},
 	"require": {
 		"benlumia007/alembic-core": "dev-develop"

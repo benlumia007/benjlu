@@ -18,11 +18,20 @@
 	</div>
 
 	<footer class="entry-taxonomies">
+		<div class="entry-category">
 		<?php if ( $entry->terms( 'category' ) ) : ?>
 			<?php foreach ( $entry->terms( 'category' ) as $term ) : ?>
-				#<a href="<?= e( $term->uri() ) ?>"><?= e( $term->title() ) ?></a>
+				# <a href="<?= e( $term->uri() ) ?>"><?= e( $term->title() ) ?></a>
 			<?php endforeach ?>
 		<?php endif ?>
+		</div>
+		<div class="entry-tags">
+			<?php if ( $entry->terms( 'tag' ) ) : ?>
+				<?php foreach ( $entry->terms( 'tag' ) as $term ) : ?>
+					# <a href="<?= e( $term->uri() ) ?>"><?= e( $term->title() ) ?></a>
+				<?php endforeach ?>
+			<?php endif ?>
+		</div>
 	</footer>
 
 </article>

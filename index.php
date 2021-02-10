@@ -25,25 +25,25 @@ $benjlu->instance( 'config/entry', require_once( $benjlu->path . '/app/functions
 $benjlu->instance( 'path/content', 'user/content' );
 $benjlu->singleton( 'template/engine', Benlumia007\Alembic\Template\Engine\Engine::class );
 $benjlu->singleton( 'content/types', function() { return new Benlumia007\Alembic\Entry\Types(); } );
-$benjlu->instance( 'cache/meta', [ 'date', 'category', 'era', 'slug' ] );
+$benjlu->instance( 'cache/meta', [ 'date', 'category', 'tag', 'slug' ] );
 $benjlu->singleton( 'mix', function( $app ) { $file = "{$app->path}/public/mix-manifest.json"; return file_exists( $file ) ? json_decode( file_get_contents( $file ), true ) : null; } );
 $benjlu->singleton( 'request', Benlumia007\Alembic\Http\Request::class );
+$benjlu->singleton( 'yaml', Benlumia007\Alembic\Tools\Yaml::class );
 $benjlu->proxy( Benlumia007\Alembic\Proxies\Engine::class, 'Benlumia007\Alembic\Engine' );
 $benjlu->proxy( Benlumia007\Alembic\Proxies\ContentTypes::class, 'Benlumia007\Alembic\ContentTypes' );
 $benjlu->boot();
 
-$benjlu->routes->get( 'feed', Benlumia007\Alembic\Controllers\Feed::class, 'top' );
-$benjlu->routes->get( 'page/{number}', Benlumia007\Alembic\Controllers\Home::class, 'top' );
+$benjlu->routes->get( 'blog/feed', Benlumia007\Alembic\Controllers\Feed::class, 'top' );
+$benjlu->routes->get( 'blog/page/{number}', Benlumia007\Alembic\Controllers\Home::class, 'top' );
 
-Benlumia007\Alembic\ContentTypes::add( 'post', new Benlumia007\Alembic\Entry\Types\Post( $benjlu->routes ) );
-Benlumia007\Alembic\ContentTypes::add( 'category', new Benlumia007\Alembic\Entry\Types\Taxonomy( $benjlu->routes ) );
-Benlumia007\Alembic\ContentTypes::add( 'era', new Benlumia007\Alembic\Entry\Types\Era( $benjlu->routes ) );
+Benlumia007\Alembic\ContentTypes::add( 'category', new Benlumia007\Alembic\Entry\Types\Category( $benjlu->routes ) );
+Benlumia007\Alembic\ContentTypes::add( 'tag', new Benlumia007\Alembic\Entry\Types\Tag( $benjlu->routes ) );
 Benlumia007\Alembic\ContentTypes::add( 'author', new Benlumia007\Alembic\Entry\Types\Author( $benjlu->routes ) );
-Benlumia007\Alembic\ContentTypes::add( 'literature', new Benlumia007\Alembic\Entry\Types\Literature( $benjlu->routes ) );
+Benlumia007\Alembic\ContentTypes::add( 'post', new Benlumia007\Alembic\Entry\Types\Post( $benjlu->routes ) );
 Benlumia007\Alembic\ContentTypes::add( 'page', new Benlumia007\Alembic\Entry\Types\Page( $benjlu->routes ) );
 Benlumia007\Alembic\ContentTypes::registerRoutes();
 $benjlu->routes->get( '/', Benlumia007\Alembic\Controllers\Home::class );
-
+$benjlu->routes->get( '/blog', Benlumia007\Alembic\Controllers\Home::class );
 
 if ( isset( $_GET['bust-cache'] ) ) {
 

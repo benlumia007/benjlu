@@ -28,6 +28,7 @@
 	<?php if ( 'aside' === $format ) : ?>
 		<div class="entry-content">
 			<?= $entry->content() ?>
+
 		</div>
 	<?php else : ?>
 		<div class="entry-summary">

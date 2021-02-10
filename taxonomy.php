@@ -20,3 +20,4 @@
 		</article>
 	</div>
 </section>
+<?php \Benlumia007\Alembic\Engine::view( 'footer' )->display() ?>

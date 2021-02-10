@@ -1,4 +1,4 @@
-<?php \Merlot\Engine::view( 'header', [], [ 'title' => $title ] )->display() ?>
+<?php Benlumia007\Alembic\Engine::view( 'header', [], [ 'title' => $title ] )->display() ?>
 
 <div class="app-content">
 	<main class="app-main">
@@ -20,9 +20,9 @@
 			<?php
 			$current_year = $current_month = $current_day = '';
 
-			$posts = new Merlot\Entry\Entries(
-				new Merlot\Entry\Locator(
-					Merlot\ContentTypes::get( 'category' )->path()
+			$posts = new Benlumia007\Alembic\Entry\Entries(
+				new Benlumia007\Alembic\Entry\Locator(
+					Benlumia007\Alembic\ContentTypes::get( 'tag' )->path()
 				), [
 					'number' => PHP_INT_MAX
 			] ); ?>
@@ -43,4 +43,4 @@
 	</main>
 </div>
 
-<?php \Merlot\Engine::view( 'footer' )->display() ?>
+<?php Benlumia007\Alembic\Engine::view( 'footer' )->display() ?>
