@@ -1,17 +1,16 @@
 <?php Benlumia007\Alembic\Engine::view( 'header', [], [ 'title' => $title ] )->display() ?>
-
-<div class="app-content">
-	<main class="app-main">
+<section id="content" class="site-content">
+	<main id="main" class="content-area">
 
 		<?php foreach ( $entries->all() as $entry ) : ?>
 
-			<article class="entry entry--single">
+			<article class="page">
 
-				<header class="entry__header">
-					<h1 class="entry__title"><?= widow( e( $entry->title() ) ) ?></h1>
+				<header class="entry-header">
+					<h1 class="entry-title"><?= widow( e( $entry->title() ) ) ?></h1>
 				</header>
 
-				<div class="entry__content">
+				<div class="entry-content">
 					<?= $entry->content() ?>
 				</div>
 
@@ -83,6 +82,6 @@
 		<?php endforeach ?>
 
 	</main>
-</div>
+</section>
 
 <?php \Benlumia007\Alembic\Engine::view( 'footer' )->display() ?>

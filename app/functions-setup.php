@@ -3,13 +3,13 @@
 function site_title() {
 	$data = Benlumia007\Alembic\App::resolve( 'yaml' )->load( ( file_exists( 'config.yml' ) ) ? 'config.yml' : '' );
 	$title = $data['title'];
-	echo $title;
+	echo strip_tags( $title );
 }
 
 function site_tagline() {
 	$data = Benlumia007\Alembic\App::resolve( 'yaml' )->load( ( file_exists( 'config.yml' ) ) ? 'config.yml' : '' );
 	$title = $data['tagline'];
-	echo $title;	
+	echo strip_tags( $title );
 }
 
 function primary_navigation() {
