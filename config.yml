@@ -1,8 +1,10 @@
-title: Benjamin Lu
-tagline: WordPress Developer
+title: "Benjamin Lu"
+tagline: "WordPress Developer"
 
 primary:
   - title: "About Me"
-    url: "/about-me"
+    url:   "/about-me"
+  - title: "Archives"
+    url:   "/archives"
   - title: "Contact Me"
-    url: "/contact-me"
+    url:   "/contact-me"
