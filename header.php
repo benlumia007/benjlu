@@ -48,7 +48,7 @@
 			<nav id="primary" class="menu-primary">
 				<button class="menu-toggle" aria-conrol="primary-menu" aria-expanded="false"><?= e( 'Menu' ); ?></button>
 				<ul class="menu-items">
-					<?php primary_navigation(); ?>
+					<?php e( primary_navigation() ); ?>
 				</ul>
 			</nav>
 		</div>
