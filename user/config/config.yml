@@ -4,10 +4,6 @@ tagline: "WordPress Developer"
 primary:
   - title: "About Me"
     url:   "/about-me"
-  - title: "Blog"
-    url:   "/blog"
-  - title: "Contact Me"
-    url:   "/contact-me"
 
 social:
   - title: "Facebook"
