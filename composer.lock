@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/benlumia007/alembic-core.git",
-                "reference": "a5ea6597f5bf08ee925d75845d45d8356c5262dc"
+                "reference": "5e5cf89dbc42e25e10a8d7480a753196aeb0299b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/benlumia007/alembic-core/zipball/a5ea6597f5bf08ee925d75845d45d8356c5262dc",
-                "reference": "a5ea6597f5bf08ee925d75845d45d8356c5262dc",
+                "url": "https://api.github.com/repos/benlumia007/alembic-core/zipball/5e5cf89dbc42e25e10a8d7480a753196aeb0299b",
+                "reference": "5e5cf89dbc42e25e10a8d7480a753196aeb0299b",
                 "shasum": ""
             },
             "require": {
@@ -57,7 +57,7 @@
                 "issues": "https://github.com/benlumia007/alembic-core/issues",
                 "source": "https://github.com/benlumia007/alembic-core/tree/develop"
             },
-            "time": "2021-02-11T19:37:27+00:00"
+            "time": "2021-02-11T22:15:50+00:00"
         },
         {
             "name": "erusev/parsedown",

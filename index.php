@@ -42,8 +42,8 @@ Benlumia007\Alembic\ContentTypes::add( 'author', new Benlumia007\Alembic\Entry\T
 Benlumia007\Alembic\ContentTypes::add( 'post', new Benlumia007\Alembic\Entry\Types\Post( $benjlu->routes ) );
 Benlumia007\Alembic\ContentTypes::add( 'page', new Benlumia007\Alembic\Entry\Types\Page( $benjlu->routes ) );
 Benlumia007\Alembic\ContentTypes::registerRoutes();
-$benjlu->routes->get( '/', Benlumia007\Alembic\Controllers\Blog::class );
-// $benjlu->routes->get( '/', Benlumia007\Alembic\Controllers\Home::class );
+$benjlu->routes->get( '/blog', Benlumia007\Alembic\Controllers\Blog::class );
+$benjlu->routes->get( '/', Benlumia007\Alembic\Controllers\Home::class );
 
 if ( isset( $_GET['bust-cache'] ) ) {
 
