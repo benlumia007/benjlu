@@ -27,7 +27,7 @@ let files = [
 	'404.php',
 	'archive.php',
 	'author.php',
-	'changelog.md',
+	'blog.php',
 	'footer.php',
 	'header.php',
 	'home.php',

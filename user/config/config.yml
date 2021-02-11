@@ -4,8 +4,8 @@ tagline: "WordPress Developer"
 primary:
   - title: "About Me"
     url:   "/about-me"
-  - title: "Archives"
-    url:   "/archives"
+  - title: "Blog"
+    url:   "/blog"
   - title: "Contact Me"
     url:   "/contact-me"
 

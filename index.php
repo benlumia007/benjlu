@@ -34,7 +34,7 @@ $benjlu->proxy( Benlumia007\Alembic\Proxies\ContentTypes::class, 'Benlumia007\Al
 $benjlu->boot();
 
 $benjlu->routes->get( 'blog/feed', Benlumia007\Alembic\Controllers\Feed::class, 'top' );
-$benjlu->routes->get( 'blog/page/{number}', Benlumia007\Alembic\Controllers\Home::class, 'top' );
+$benjlu->routes->get( 'blog/page/{number}', Benlumia007\Alembic\Controllers\Blog::class, 'top' );
 
 Benlumia007\Alembic\ContentTypes::add( 'category', new Benlumia007\Alembic\Entry\Types\Category( $benjlu->routes ) );
 Benlumia007\Alembic\ContentTypes::add( 'tag', new Benlumia007\Alembic\Entry\Types\Tag( $benjlu->routes ) );
@@ -42,8 +42,8 @@ Benlumia007\Alembic\ContentTypes::add( 'author', new Benlumia007\Alembic\Entry\T
 Benlumia007\Alembic\ContentTypes::add( 'post', new Benlumia007\Alembic\Entry\Types\Post( $benjlu->routes ) );
 Benlumia007\Alembic\ContentTypes::add( 'page', new Benlumia007\Alembic\Entry\Types\Page( $benjlu->routes ) );
 Benlumia007\Alembic\ContentTypes::registerRoutes();
-$benjlu->routes->get( '/', Benlumia007\Alembic\Controllers\Home::class );
-$benjlu->routes->get( '/blog', Benlumia007\Alembic\Controllers\Home::class );
+$benjlu->routes->get( '/', Benlumia007\Alembic\Controllers\Blog::class );
+// $benjlu->routes->get( '/', Benlumia007\Alembic\Controllers\Home::class );
 
 if ( isset( $_GET['bust-cache'] ) ) {
 
