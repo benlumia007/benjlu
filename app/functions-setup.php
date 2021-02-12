@@ -19,3 +19,10 @@ function primary_navigation() {
 		<li class="menu-item"><a href="<?= e( uri( $title['url'] ) ) ?>"><?= e( $title['title'] ); ?></a></li>
 	<?php }
 }
+
+function social_navigation() {
+	$data = Benlumia007\Alembic\Config\File::get_instance()->get_data();
+	foreach ($data['socal'] as $name => $title ) { ?>
+		<li class="menu-item"><a href="<?= e( uri( $title['url'] ) ) ?>"><?= e( $title['title'] ); ?></a></li>
+	<?php }
+}
