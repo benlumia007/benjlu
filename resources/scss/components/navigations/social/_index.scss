@@ -23,23 +23,23 @@
     padding: 0 1.125rem 1.125rem 1.125rem;
 
     .menu-items {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      text-align: center;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
 
-      .menu-item {
-        display: inline-block;
-        padding: 0 0.4rem;
+		.menu-item {
+			display: inline-block;
+			padding: 0 0.4rem;
 
-          a {
-            border-bottom: none;
+			a {
+				border-bottom: none;
 
-            svg {
-              height: 1.5rem;
-              width: 1.5rem;
-            }
-          }
-      }
+				svg {
+				height: 1.5rem;
+				width: 1.5rem;
+				}
+			}
+		}
     }
 }

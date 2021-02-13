@@ -8,14 +8,10 @@ insert_final_newline = true
 indent_style = space
 indent_size = 2
 
-[*.{diff,md}]
-insert_final_newline = false
-trim_trailing_whitespace = false
-
-[*.{conf,conf-sample}]
+[*.scss]
+indent_style = tab
 indent_size = 4
 
-# Use WordPress-style tabs for PHP files
 [*.php]
 indent_style = tab
 indent_size = 4
