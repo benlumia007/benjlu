@@ -1,5 +1,5 @@
 title: "Benjamin Lu"
-tagline: "WordPress Developer"
+tagline: "Life and Stuff"
 
 primary:
   - title: "About Me"
@@ -8,7 +8,10 @@ primary:
 social:
   - title: "Facebook"
     url: "https://www.facebook.com/benlumia007"
+    svg: "/svg/facebook-brands.svg.php"
   - title: "Twitter"
     url: "https://twitter.com/benlumia007"
+    svg: "/svg/twitter-brands.svg.php"
   - title: "WordPress"
     url: "https://profiles.wordpress.org/benlumia007/"
+    svg: "/svg/wordpress-simple-brands.svg.php"

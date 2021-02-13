@@ -11,7 +11,12 @@
 <footer id="footer" class="site-footer">
         <div class="site-info">
             <p class="credit">Powered by heart and soul.</p>
-        </div>                
+        </div>  
+		<nav id="social" class="menu-social">
+			<ul class="menu-items">
+				<?php e( social_navigation() ); ?>
+			</ul>
+		</nav>              
 	</footer>
 </section>
 </body>

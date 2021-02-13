@@ -22,7 +22,7 @@ function primary_navigation() {
 
 function social_navigation() {
 	$data = Benlumia007\Alembic\Config\File::get_instance()->get_data();
-	foreach ($data['socal'] as $name => $title ) { ?>
-		<li class="menu-item"><a href="<?= e( uri( $title['url'] ) ) ?>"><?= e( $title['title'] ); ?></a></li>
+	foreach ($data['social'] as $name => $title ) { ?>
+		<li class="menu-item"><a href="<?= e( $title['url'] ); ?>" target="_blank"><svg><?php include( public_path() . e( $title['svg'] ) ); ?></svg></a></li>
 	<?php }
 }
