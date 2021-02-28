@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/benlumia007/alembic-core.git",
-                "reference": "6cf0051080f19807400dd6c83a3df086f22ce733"
+                "reference": "a55965cd484dcd574ed9e3c60a4bdf9963f5ddd2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/benlumia007/alembic-core/zipball/6cf0051080f19807400dd6c83a3df086f22ce733",
-                "reference": "6cf0051080f19807400dd6c83a3df086f22ce733",
+                "url": "https://api.github.com/repos/benlumia007/alembic-core/zipball/a55965cd484dcd574ed9e3c60a4bdf9963f5ddd2",
+                "reference": "a55965cd484dcd574ed9e3c60a4bdf9963f5ddd2",
                 "shasum": ""
             },
             "require": {
@@ -57,7 +57,7 @@
                 "issues": "https://github.com/benlumia007/alembic-core/issues",
                 "source": "https://github.com/benlumia007/alembic-core/tree/develop"
             },
-            "time": "2021-02-12T23:40:42+00:00"
+            "time": "2021-02-23T00:15:51+00:00"
         },
         {
             "name": "erusev/parsedown",
@@ -269,7 +269,7 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.22.0",
+            "version": "v1.22.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
@@ -328,7 +328,7 @@
                 "portable"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.22.0"
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.22.1"
             },
             "funding": [
                 {
