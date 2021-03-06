@@ -17,4 +17,6 @@ jobs:
       - name: step four
         run: npm run build
       - name: step five
+        run: sed -i -e "s/benjlu.test/benjlu.com/g" "app/functions-config.php"
+      - name: step six
         run: rsync -r benjlu/* ~/public_html
