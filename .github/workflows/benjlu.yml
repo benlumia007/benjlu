@@ -17,4 +17,4 @@ jobs:
       - name: step four
         run: npm run build
       - name: step five
-        run: mv benjlu ~/public_html
+        run: rsync -r benjlu/* ~/public_html
