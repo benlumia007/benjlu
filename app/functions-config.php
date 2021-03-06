@@ -1,5 +1,5 @@
 <?php
 
 return [
-	'uri' => 'https://benjlu.com',
+	'uri' => 'https://benjlu.test',
 ];
